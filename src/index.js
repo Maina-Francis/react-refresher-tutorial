@@ -34,15 +34,18 @@ function BookList() {
 }
 
 const Book = (props) => {
-  console.log(props);
+  // console.log(props);
+  // props destructuring
+  const { img, title, author } = props;
+
   return (
     <article className="book">
-      <img src={props.img} alt="" />
-      <h1>{props.title} </h1>
+      <img src={img} alt="" />
+      <h1>{title} </h1>
       <h4
         style={{ color: "#617d98", fontSize: "0.75rem", marginTop: "0.25rem" }}
       >
-        {props.author}
+        {author}
       </h4>
     </article>
   );
