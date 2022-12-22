@@ -14,6 +14,7 @@ const Book = () => {
     <article>
       <Image />
       <Title />
+      <Author />
     </article>
   );
 };
@@ -30,6 +31,11 @@ const Image = () => {
 const Title = () => {
   return <h1>It Starts with Us: A Novel (It Ends with Us) </h1>;
 };
+
+const Author = () => {
+  return <h4>Colleen Hoover</h4>;
+};
+
 export default BookList;
 
 ReactDOM.render(<BookList />, document.getElementById("root"));
