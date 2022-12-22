@@ -1,9 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import "./index.css";
 
 function BookList() {
   return (
-    <section>
+    <section className="booklist">
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
       <Book />
     </section>
   );
@@ -11,7 +17,7 @@ function BookList() {
 
 const Book = () => {
   return (
-    <article>
+    <article className="book">
       <Image />
       <Title />
       <Author />
@@ -23,7 +29,7 @@ const Image = () => {
   return (
     <img
       src="https://m.media-amazon.com/images/W/WEBP_402378-T2/images/I/51VC+Vru96L._SY344_BO1,204,203,200_.jpg"
-      alt="Book image"
+      alt="BookS"
     />
   );
 };
