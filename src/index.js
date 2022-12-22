@@ -1,14 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-function Greeting() {
-  return <h4>Greetings from Francis, this is my first component.</h4>;
+function BookList() {
+  return (
+    <section>
+      <Book />
+      <Book />
+      <Book />
+    </section>
+  );
 }
 
-// const Greeting = () => {
-//   return React.createElement("h1", {}, "Hello World!");
-// };
+const Book = () => {
+  return <article>This is a book.</article>;
+};
 
-export default Greeting;
+export default BookList;
 
-ReactDOM.render(<Greeting />, document.getElementById("root"));
+ReactDOM.render(<BookList />, document.getElementById("root"));
