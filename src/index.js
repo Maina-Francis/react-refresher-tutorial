@@ -16,6 +16,12 @@ const books = [
     title: "The Light We Carry: Overcoming in Uncertain Times",
     img: "https://m.media-amazon.com/images/W/WEBP_402378-T2/images/I/41HcM1yzHcL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
   },
+  {
+    id: 3,
+    author: "Ina Garten",
+    title: "Go-To Dinners: A Barefoot Contessa Cookbook",
+    img: "https://m.media-amazon.com/images/W/WEBP_402378-T2/images/I/41zFito0fdL._SX218_BO1,204,203,200_QL40_FMwebp_.jpg",
+  },
 ];
 
 function BookList() {
@@ -23,16 +29,16 @@ function BookList() {
     <section className="booklist">
       {books.map((book) => {
         // console.log(book);
-        return <Book key={book.id} book={book} />;
+        return <Book key={book.id} {...book} />;
       })}
     </section>
   );
 }
 
 const Book = (props) => {
-  console.log(props);
+  // console.log(props);
   // props destructuring
-  const { img, title, author } = props.book;
+  const { img, title, author } = props;
 
   return (
     <article className="book">
