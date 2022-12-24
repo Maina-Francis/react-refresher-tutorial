@@ -3,40 +3,36 @@ import ReactDOM from "react-dom";
 import "./index.css";
 
 // setup variables
-const firstBook = {
-  author: "Colleen Hoover",
-  title: "It Starts with Us: A Novel (It Ends with Us)",
-  img: "https://m.media-amazon.com/images/W/WEBP_402378-T2/images/I/51VC+Vru96L._SY344_BO1,204,203,200_.jpg",
-};
-
-const secondBook = {
-  author: "Michelle Obama ",
-  title: "The Light We Carry: Overcoming in Uncertain Times",
-  img: "https://m.media-amazon.com/images/W/WEBP_402378-T2/images/I/41HcM1yzHcL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
-};
+const books = [
+  {
+    id: 1,
+    author: "Colleen Hoover",
+    title: "It Starts with Us: A Novel (It Ends with Us)",
+    img: "https://m.media-amazon.com/images/W/WEBP_402378-T2/images/I/51VC+Vru96L._SY344_BO1,204,203,200_.jpg",
+  },
+  {
+    id: 2,
+    author: "Michelle Obama ",
+    title: "The Light We Carry: Overcoming in Uncertain Times",
+    img: "https://m.media-amazon.com/images/W/WEBP_402378-T2/images/I/41HcM1yzHcL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
+  },
+];
 
 function BookList() {
   return (
     <section className="booklist">
-      <Book
-        author={firstBook.author}
-        title={firstBook.title}
-        img={firstBook.img}
-      />
-
-      <Book
-        author={secondBook.author}
-        title={secondBook.title}
-        img={secondBook.img}
-      />
+      {books.map((book) => {
+        // console.log(book);
+        return <Book key={book.id} book={book} />;
+      })}
     </section>
   );
 }
 
 const Book = (props) => {
-  // console.log(props);
+  console.log(props);
   // props destructuring
-  const { img, title, author } = props;
+  const { img, title, author } = props.book;
 
   return (
     <article className="book">
