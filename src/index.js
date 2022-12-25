@@ -44,8 +44,17 @@ const Book = (props) => {
     alert("Hello Future Microsoft engineer!");
   };
 
+  const complexExample = (author) => {
+    console.log(author);
+  };
+
   return (
-    <article className="book">
+    <article
+      className="book"
+      onMouseOver={() => {
+        console.log(title);
+      }}
+    >
       <img src={img} alt="" />
       <h1 onClick={() => console.log(title)}>{title} </h1>
       <h4
@@ -55,6 +64,10 @@ const Book = (props) => {
       </h4>
       <button type="button" onClick={clickHandler}>
         Reference Handler
+      </button>
+      <button type="button" onClick={() => complexExample(author)}>
+        {" "}
+        More Complex Example
       </button>
     </article>
   );
