@@ -36,7 +36,6 @@ function BookList() {
 }
 
 const Book = (props) => {
-  // console.log(props);
   // props destructuring
   const { img, title, author } = props;
 
